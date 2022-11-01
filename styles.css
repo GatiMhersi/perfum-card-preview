@@ -1,0 +1,165 @@
+body {
+  background-color: hsl(30, 38%, 92%);
+  font-family: "Montserrat";
+}
+
+h1, h2, h3, p{
+  margin: 0;
+  line-height: 1;
+}
+
+.card {
+  width: 50%;
+  height: 450px;
+  margin:10% auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 50%;
+
+}
+
+.container-image{
+  flex-basis: 50%;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.image-deskt {
+  width: 100%;
+  height: 100%;
+  /* box-sizing: border-box; */
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+}
+
+.image-mobile {
+  display: none;
+}
+
+.info {
+  display: flex;
+  /* height: 100%; */
+  flex-direction: column;
+  align-content: space-between;
+  flex-basis: 50%;
+  flex-shrink: 1;
+  flex-grow: 1;
+  padding: 6%;
+  background-color: white;
+  border-radius: 0 10px 10px 0;
+}
+
+.clasification h3{
+  flex-grow: 1;
+  font-size: 12px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: hsl(228, 12%, 48%);
+  /* font-weight: lighter; */
+  margin-top: 0;
+}
+
+.title{
+  flex-grow: 0;
+  font-family: "Fraunces";
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.description p{
+  flex-grow: 1;
+  font-size: 14px;
+  line-height: 1.5;
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+}
+
+.price {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.price-now {
+  color: hsl(158, 36%, 37%);
+  font-family: "Fraunces" ;
+  font-size: 20px;
+  margin-right: 1rem;
+}
+
+.price-wrong h3 {
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.button{
+  flex-grow: 0.4;
+  display: flex;
+  background-color: hsl(158, 36%, 37%);
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.button:hover{
+  background-color: hsl(158, 36%, 20%);
+  cursor: pointer;
+}
+
+.cart{
+  padding-right: 10px;
+}
+
+.buy{
+  color: white;
+  font-size: 12px;
+}
+
+@media screen and (max-width:375px) {
+    .card{
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      margin: auto;
+    }
+
+    .container-image{
+      flex-basis: 40%;
+    }
+
+    .image-deskt{
+      display: none;
+    }
+
+    .image-mobile{
+      display:block;
+      height: 100%;
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+      object-fit: cover;
+    }
+
+    .info {
+      border-radius: 0 0 10px 10px;
+      flex-basis: 60%;
+      padding: 7%;
+    }
+
+    .description p{
+      font-size: 14px;
+      margin: 0 auto 6% ;
+    }
+
+    .price {
+      margin: 2% 0 7%;
+    }
+
+    .button {
+      height: 50px;
+    }
+
+}
